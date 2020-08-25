@@ -33,7 +33,7 @@ object DM: TDM
       'MaxBlobSize=-1'
       'TrimChar=False'
       'DriverName=Firebird'
-      'Database=C:\SysFrete\bdados\BDADOS.FDB'
+      'Database=C:\vBox\bdados\BDADOS.FDB'
       'RoleName=RoleName'
       'User_Name=sysdba'
       'Password=masterkey'
@@ -779,6 +779,12 @@ object DM: TDM
       ProviderFlags = []
       Size = 2
     end
+    object cdsMotoristaCOMISSAO: TSingleField
+      DisplayLabel = 'Comiss'#227'o'
+      FieldName = 'COMISSAO'
+      DisplayFormat = '###,###0.00'
+      EditFormat = '###,###0.00'
+    end
   end
   object dspMotorista: TDataSetProvider
     DataSet = qMotorista
@@ -804,6 +810,7 @@ object DM: TDM
       ' C.TELEFONE,'
       ' C.ATIVO,'
       ' C.OBS,'
+      ' C.COMISSAO,'
       ' M.NOME AS CIDADE,'
       ' M.UF'
       ''
@@ -876,6 +883,9 @@ object DM: TDM
       FieldName = 'UF'
       ProviderFlags = []
       Size = 2
+    end
+    object qMotoristaCOMISSAO: TSingleField
+      FieldName = 'COMISSAO'
     end
   end
   object dsMarcas: TDataSource
@@ -1720,6 +1730,49 @@ object DM: TDM
       Precision = 18
       Size = 3
     end
+    object cdsServicoID_CLIENTE: TIntegerField
+      DisplayLabel = 'C'#243'd.Cli'
+      FieldName = 'ID_CLIENTE'
+    end
+    object cdsServicoID_MOTORISTA: TIntegerField
+      DisplayLabel = 'C'#243'd. Func'
+      FieldName = 'ID_MOTORISTA'
+    end
+    object cdsServicoCOMISSAO: TSingleField
+      DisplayLabel = 'Comiss'#227'o'
+      FieldName = 'COMISSAO'
+      DisplayFormat = '###,###0.00'
+      EditFormat = '###,###0.00'
+    end
+    object cdsServicoVL_RECEBER: TFMTBCDField
+      DisplayLabel = 'Vl Receber'
+      FieldName = 'VL_RECEBER'
+      DisplayFormat = '###,###0.00'
+      EditFormat = '###,###0.00'
+      Precision = 18
+      Size = 3
+    end
+    object cdsServicoDT_SERVICO: TDateField
+      DisplayLabel = 'Data'
+      FieldName = 'DT_SERVICO'
+      EditMask = '##/##/####'
+    end
+    object cdsServicoNR_PEDIDO: TIntegerField
+      DisplayLabel = 'N'#186' Pedido'
+      FieldName = 'NR_PEDIDO'
+    end
+    object cdsServicoCLIENTE: TStringField
+      DisplayLabel = 'Cliente'
+      FieldName = 'CLIENTE'
+      ProviderFlags = []
+      Size = 50
+    end
+    object cdsServicoFUNCIONARIO: TStringField
+      DisplayLabel = 'Separador'
+      FieldName = 'FUNCIONARIO'
+      ProviderFlags = []
+      Size = 50
+    end
   end
   object dspServico: TDataSetProvider
     DataSet = qServico
@@ -1734,8 +1787,18 @@ object DM: TDM
       'SELECT'
       '  S.ID_SERVICO,'
       '  S.DESCRICAO,'
-      '  S.VL_UNIT'
-      'FROM TB_SERVICOS S')
+      '  S.VL_UNIT,'
+      '  S.ID_CLIENTE,'
+      '  S.ID_MOTORISTA,'
+      '  S.COMISSAO,'
+      '  S.VL_RECEBER,'
+      '  S.DT_SERVICO,'
+      '  S.NR_PEDIDO,'
+      '  C.NOME AS CLIENTE,'
+      '  M.NOME AS FUNCIONARIO'
+      'FROM TB_SERVICOS S'
+      'INNER JOIN TB_CLIENTE C ON (C.ID_CLIENTE = S.ID_CLIENTE)'
+      'INNER JOIN TB_MOTORISTA M  ON (M.ID_MOTORISTA = S.ID_MOTORISTA)')
     SQLConnection = Conexao
     Left = 245
     Top = 244
@@ -1751,6 +1814,36 @@ object DM: TDM
       FieldName = 'VL_UNIT'
       Precision = 18
       Size = 3
+    end
+    object qServicoID_CLIENTE: TIntegerField
+      FieldName = 'ID_CLIENTE'
+    end
+    object qServicoID_MOTORISTA: TIntegerField
+      FieldName = 'ID_MOTORISTA'
+    end
+    object qServicoCOMISSAO: TSingleField
+      FieldName = 'COMISSAO'
+    end
+    object qServicoVL_RECEBER: TFMTBCDField
+      FieldName = 'VL_RECEBER'
+      Precision = 18
+      Size = 3
+    end
+    object qServicoDT_SERVICO: TDateField
+      FieldName = 'DT_SERVICO'
+    end
+    object qServicoNR_PEDIDO: TIntegerField
+      FieldName = 'NR_PEDIDO'
+    end
+    object qServicoCLIENTE: TStringField
+      FieldName = 'CLIENTE'
+      ProviderFlags = []
+      Size = 50
+    end
+    object qServicoFUNCIONARIO: TStringField
+      FieldName = 'FUNCIONARIO'
+      ProviderFlags = []
+      Size = 50
     end
   end
   object DataSource2: TDataSource

@@ -316,6 +316,24 @@ type
     cdsServicoVL_UNIT: TFMTBCDField;
     qFreteVL_NOTA: TFMTBCDField;
     cdsFreteVL_NOTA: TFMTBCDField;
+    qMotoristaCOMISSAO: TSingleField;
+    cdsMotoristaCOMISSAO: TSingleField;
+    qServicoID_CLIENTE: TIntegerField;
+    qServicoID_MOTORISTA: TIntegerField;
+    qServicoCOMISSAO: TSingleField;
+    qServicoVL_RECEBER: TFMTBCDField;
+    qServicoDT_SERVICO: TDateField;
+    qServicoNR_PEDIDO: TIntegerField;
+    qServicoCLIENTE: TStringField;
+    qServicoFUNCIONARIO: TStringField;
+    cdsServicoID_CLIENTE: TIntegerField;
+    cdsServicoID_MOTORISTA: TIntegerField;
+    cdsServicoCOMISSAO: TSingleField;
+    cdsServicoVL_RECEBER: TFMTBCDField;
+    cdsServicoDT_SERVICO: TDateField;
+    cdsServicoNR_PEDIDO: TIntegerField;
+    cdsServicoCLIENTE: TStringField;
+    cdsServicoFUNCIONARIO: TStringField;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }

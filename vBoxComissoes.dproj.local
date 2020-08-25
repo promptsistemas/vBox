@@ -10,11 +10,12 @@
     <Transaction>2020/08/01 02:35:00.000.097,C:\SysFrete\Unit1.pas=C:\SysFrete\Forms\uFrmFrete.pas</Transaction>
     <Transaction>2020/08/03 02:55:14.000.330,C:\SysFrete\Forms\uFrmFrete.dfm=C:\SysFrete\Forms\uFrete.dfm</Transaction>
     <Transaction>2020/08/03 02:55:14.000.330,C:\SysFrete\Forms\uFrmFrete.pas=C:\SysFrete\Forms\uFrete.pas</Transaction>
-    <Transaction>2020/08/03 03:02:29.000.143,C:\SysFrete\Forms\ufrmFrete.pas=C:\SysFrete\Forms\uFrete.pas</Transaction>
     <Transaction>2020/08/03 03:02:29.000.143,C:\SysFrete\Forms\ufrmFrete.dfm=C:\SysFrete\Forms\uFrete.dfm</Transaction>
+    <Transaction>2020/08/03 03:02:29.000.143,C:\SysFrete\Forms\ufrmFrete.pas=C:\SysFrete\Forms\uFrete.pas</Transaction>
     <Transaction>2020/08/13 02:30:03.000.325,=C:\SysFrete\Unit1.pas</Transaction>
-    <Transaction>2020/08/13 02:30:37.000.424,C:\SysFrete\Unit1.dfm=C:\SysFrete\Forms\uRelatorio.dfm</Transaction>
     <Transaction>2020/08/13 02:30:37.000.424,C:\SysFrete\Unit1.pas=C:\SysFrete\Forms\uRelatorio.pas</Transaction>
-    <Transaction>2020/08/24 23:13:49.152,C:\vBox\vBoxComissoes.dproj=C:\vBox\SysFrete.dproj</Transaction>
+    <Transaction>2020/08/13 02:30:37.000.424,C:\SysFrete\Unit1.dfm=C:\SysFrete\Forms\uRelatorio.dfm</Transaction>
+    <Transaction>2020/08/24 23:13:49.000.152,C:\vBox\vBoxComissoes.dproj=C:\vBox\SysFrete.dproj</Transaction>
+    <Transaction>2020/08/25 01:24:26.482,=C:\vBox\Forms\uComissoes.pas</Transaction>
   </Transactions>
 </BorlandProject>

@@ -3,7 +3,7 @@ object frmMenu: TfrmMenu
   Top = 0
   Align = alClient
   BorderStyle = bsSizeToolWin
-  Caption = 'SysFrete -  Sistema de Controle de Fretes'
+  Caption = 'vBox -  Sistema de Controle de Comiss'#245'es'
   ClientHeight = 659
   ClientWidth = 1356
   Color = 6684774
@@ -61,6 +61,7 @@ object frmMenu: TfrmMenu
       ParentFont = False
       TabOrder = 0
       VerticalAlignment = taAlignTop
+      Visible = False
       OnClick = Marcas1Click
       OnMouseMove = Panel5MouseMove
       object Image1: TImage
@@ -580,6 +581,7 @@ object frmMenu: TfrmMenu
       ParentFont = False
       TabOrder = 1
       VerticalAlignment = taAlignTop
+      Visible = False
       OnClick = ModelosFabricante1Click
       OnMouseMove = Panel2MouseMove
       object Image2: TImage
@@ -1921,11 +1923,11 @@ object frmMenu: TfrmMenu
     end
     object Panel11: TPanel
       Left = 97
-      Top = 386
+      Top = 41
       Width = 89
       Height = 83
       BevelOuter = bvNone
-      Caption = 'Motorista'
+      Caption = 'Funcion'#225'rios'
       Color = 4031341
       Font.Charset = ANSI_CHARSET
       Font.Color = clWhite
@@ -2267,11 +2269,11 @@ object frmMenu: TfrmMenu
     end
     object Panel12: TPanel
       Left = 5
-      Top = 386
+      Top = 41
       Width = 88
       Height = 83
       BevelOuter = bvNone
-      Caption = 'Cliente'
+      Caption = 'Clientes'
       Color = 4031341
       Font.Charset = ANSI_CHARSET
       Font.Color = clWhite
@@ -2689,6 +2691,7 @@ object frmMenu: TfrmMenu
       ParentFont = False
       TabOrder = 6
       VerticalAlignment = taAlignTop
+      Visible = False
       OnClick = Veculos1Click
       OnMouseMove = Panel13MouseMove
       object Image8: TImage
@@ -3193,11 +3196,11 @@ object frmMenu: TfrmMenu
     end
     object Panel14: TPanel
       Left = 5
-      Top = 298
+      Top = 128
       Width = 181
       Height = 83
       BevelOuter = bvNone
-      Caption = 'Fretes'
+      Caption = 'Comiss'#245'es'
       Color = clTeal
       Font.Charset = ANSI_CHARSET
       Font.Color = clWhite
@@ -3208,7 +3211,7 @@ object frmMenu: TfrmMenu
       ParentFont = False
       TabOrder = 7
       VerticalAlignment = taAlignTop
-      OnClick = Fretes1Click
+      OnClick = Comisses1Click
       OnMouseMove = Panel14MouseMove
       object Image9: TImage
         Left = 56
@@ -3707,7 +3710,7 @@ object frmMenu: TfrmMenu
           FFFF}
         Stretch = True
         Transparent = True
-        OnClick = Fretes1Click
+        OnClick = Comisses1Click
       end
     end
   end
@@ -4085,7 +4088,7 @@ object frmMenu: TfrmMenu
         OnClick = Clientes1Click
       end
       object Motoristas1: TMenuItem
-        Caption = '&Motoristas'
+        Caption = '&Funcionarios'
         OnClick = Motoristas1Click
       end
       object N1: TMenuItem
@@ -4093,21 +4096,26 @@ object frmMenu: TfrmMenu
       end
       object Marcas1: TMenuItem
         Caption = '&Marcas(Fabricante)'
+        Visible = False
         OnClick = Marcas1Click
       end
       object ModelosFabricante1: TMenuItem
         Caption = 'Mo&delos(Fabricante)'
+        Visible = False
         OnClick = ModelosFabricante1Click
       end
       object N2: TMenuItem
         Caption = '-'
+        Visible = False
       end
       object Veculos1: TMenuItem
         Caption = '&Ve'#237'culos'
+        Visible = False
         OnClick = Veculos1Click
       end
       object N3: TMenuItem
         Caption = '-'
+        Visible = False
       end
       object Usurios1: TMenuItem
         Caption = '&Usu'#225'rios'
@@ -4122,7 +4130,11 @@ object frmMenu: TfrmMenu
       Caption = 'Lan'#231'amentos'
       object Fretes1: TMenuItem
         Caption = '&Fretes'
-        OnClick = Fretes1Click
+        Visible = False
+      end
+      object Comisses1: TMenuItem
+        Caption = '&Comiss'#245'es'
+        OnClick = Comisses1Click
       end
     end
     object Sair1: TMenuItem

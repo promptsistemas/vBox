@@ -36,7 +36,7 @@ object frmCadMotorista: TfrmCadMotorista
     ParentFont = False
     TabOrder = 0
     object DBText1: TDBText
-      Left = 429
+      Left = 449
       Top = 2
       Width = 130
       Height = 28
@@ -52,9 +52,9 @@ object frmCadMotorista: TfrmCadMotorista
     object Label17: TLabel
       Left = 8
       Top = 4
-      Width = 281
+      Width = 308
       Height = 30
-      Caption = 'CADASTRO DE MOTORISTAS'
+      Caption = 'CADASTRO DE FUNCION'#193'RIOS'
       Font.Charset = ANSI_CHARSET
       Font.Color = clWhite
       Font.Height = -21
@@ -63,7 +63,7 @@ object frmCadMotorista: TfrmCadMotorista
       ParentFont = False
     end
     object Label18: TLabel
-      Left = 322
+      Left = 342
       Top = 2
       Width = 96
       Height = 32
@@ -774,7 +774,7 @@ object frmCadMotorista: TfrmCadMotorista
       ParentFont = False
     end
     object Label2: TLabel
-      Left = 168
+      Left = 140
       Top = 50
       Width = 40
       Height = 21
@@ -863,6 +863,19 @@ object frmCadMotorista: TfrmCadMotorista
       Font.Style = []
       ParentFont = False
     end
+    object Label1: TLabel
+      Left = 207
+      Top = 50
+      Width = 89
+      Height = 21
+      Caption = 'Comiss'#227'o %'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold, fsItalic]
+      ParentFont = False
+    end
     object DBEdit1: TDBEdit
       Left = 3
       Top = 14
@@ -905,7 +918,7 @@ object frmCadMotorista: TfrmCadMotorista
       OnKeyPress = FormKeyPress
     end
     object DBEdit19: TDBEdit
-      Left = 214
+      Left = 186
       Top = 53
       Width = 11
       Height = 19
@@ -928,8 +941,7 @@ object frmCadMotorista: TfrmCadMotorista
       DataField = 'DT_CADASTRO'
       DataSource = DM.dsMotorista
       ParentCtl3D = False
-      ReadOnly = True
-      TabOrder = 5
+      TabOrder = 6
       OnKeyPress = FormKeyPress
     end
     object DBEdit16: TDBEdit
@@ -942,8 +954,22 @@ object frmCadMotorista: TfrmCadMotorista
       DataField = 'TELEFONE'
       DataSource = DM.dsMotorista
       ParentCtl3D = False
-      TabOrder = 4
+      TabOrder = 5
       OnEnter = DBEdit16Enter
+      OnKeyPress = FormKeyPress
+    end
+    object DBEdit4: TDBEdit
+      Left = 305
+      Top = 53
+      Width = 40
+      Height = 19
+      CharCase = ecUpperCase
+      Ctl3D = False
+      DataField = 'COMISSAO'
+      DataSource = DM.dsMotorista
+      ParentCtl3D = False
+      TabOrder = 4
+      OnExit = DBEdit19Exit
       OnKeyPress = FormKeyPress
     end
   end

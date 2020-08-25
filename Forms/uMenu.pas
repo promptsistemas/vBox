@@ -53,6 +53,7 @@ type
     Veculos1: TMenuItem;
     LogOff1: TMenuItem;
     Fretes1: TMenuItem;
+    Comisses1: TMenuItem;
     procedure Timer1Timer(Sender: TObject);
     function DiaSemana(Data:TDateTime): String;
     procedure Usurios1Click(Sender: TObject);
@@ -83,7 +84,7 @@ type
       Y: Integer);
     procedure FormShow(Sender: TObject);
     procedure LogOff1Click(Sender: TObject);
-    procedure Fretes1Click(Sender: TObject);
+    procedure Comisses1Click(Sender: TObject);
 
   private
     { Private declarations }
@@ -114,7 +115,7 @@ implementation
 {$R *.dfm}
 
 uses uLogin, uCadCliente, uCadMotorista, uCadMarcas, uCadModelos, uCadVeiculo,
-   uDM, uSenha, uFrmFrete;
+   uDM, uSenha, uFrmFrete, uComissoes;
 
 procedure TfrmMenu.Clientes1Click(Sender: TObject);
 begin
@@ -122,6 +123,15 @@ begin
   begin
     frmCadCliente := TfrmCadCliente.Create(Application);
     frmCadCliente.ShowModal;
+  end;
+end;
+
+procedure TfrmMenu.Comisses1Click(Sender: TObject);
+begin
+  if frmComissoes = nil then
+  begin
+    frmComissoes := TfrmComissoes.Create(Application);
+    frmComissoes.ShowModal;
   end;
 end;
 
@@ -188,15 +198,6 @@ end;
 procedure TfrmMenu.FormShow(Sender: TObject);
 begin
   NovoAcesso;
-end;
-
-procedure TfrmMenu.Fretes1Click(Sender: TObject);
-begin
-  if frmFrete = nil then
-  begin
-    frmFrete := TfrmFrete.Create(Application);
-    frmFrete.ShowModal;
-  end;
 end;
 
 procedure TfrmMenu.LogOff1Click(Sender: TObject);

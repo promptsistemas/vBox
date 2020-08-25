@@ -17,7 +17,8 @@ uses
   uCadVeiculo in 'Forms\uCadVeiculo.pas' {frmCadVeiculo},
   uSenha in 'Forms\uSenha.pas' {frmSenha},
   ufrmFrete in 'Forms\ufrmFrete.pas' {frmFrete},
-  uRelatorio in 'Forms\uRelatorio.pas' {frmRelatorio};
+  uRelatorio in 'Forms\uRelatorio.pas' {frmRelatorio},
+  uComissoes in 'Forms\uComissoes.pas' {frmComissoes};
 
 {$R *.res}
 
