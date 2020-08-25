@@ -83,8 +83,8 @@
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
-        <DCC_ExeOutput>C:\SysFrete\Aplicativo\</DCC_ExeOutput>
-        <DCC_DcuOutput>C:\SysFrete\dcu\</DCC_DcuOutput>
+        <DCC_ExeOutput>C:\vBox\Aplicativo\</DCC_ExeOutput>
+        <DCC_DcuOutput>C:\vBox\dcu\</DCC_DcuOutput>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
     </PropertyGroup>
